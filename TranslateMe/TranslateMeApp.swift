@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseAuth
 
 @main
 struct TranslateMeApp: App {
+    init() { // <-- Add an init
+           FirebaseApp.configure() // <-- Configure Firebase app
+       }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePage()
         }
     }
 }
